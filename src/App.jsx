@@ -45,7 +45,7 @@ function App () {
   return (
     <FavProvider>
 
-      <div className='page'>
+      <div className="bg-blue-700">
         <header>
           <h1>My anime place! </h1>
           <form className='form' onSubmit={handleSumbit}>
