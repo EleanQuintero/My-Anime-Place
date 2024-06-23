@@ -1,26 +1,25 @@
-## Enunciado
+## Plataforma web de busqueda de anime basado en My Anime List 
 
-Crea una aplicación para buscar películas
+-Proyecto de practica en javascript y react:
 
-API a usar: - https://www.omdbapi.com/
-APi key:  d3bf2274
-ENDPOINT: 'https://www.omdbapi.com/?i=tt3896198&apikey=d3bf2274&s=${search}'
-Requerimientos:
+-Servicio principal: 
+   Se realiza una peticion de datos basados en la query obtenida mediante input a la api publica de my anime list: ✔
 
-✅ Necesita mostrar un input para buscar la película y un botón para buscar.
+   Api utilizada: https://api.jikan.moe/v4/anime?q=${search}&limit=10 ✔
 
-✅ Lista las películas y muestra el título, año y poster.
+-Servicios secundarios: 
+  Apartado de usuarios mediante mocks locales (actualmente en desarrollo para base de datos) ✔
+  listar favoritos y guardarlos en localstorage *requiere inicio de sesion* (sera desactivada esta restriccion al momento de lanzarlo a produccion) ✔
 
- Que el formulario funcione
+-Servicios pendientes de implementar: 
+  Mostrar descripción de el anime seleccionado al hacer hover 
+  Base de datos de usuarios 
 
-Haz que las películas se muestren en un grid responsive.
 
- Hacer el fetching de datos a la API
 
-Primera iteración:
+   *PROYECTO ACTUALMENTE EN DESARROLLO* 
+ 
 
- Evitar que se haga la misma búsqueda dos veces seguidas.
 
- Haz que la búsqueda se haga automáticamente al escribir.
 
- Evita que se haga la búsqueda continuamente al escribir (debounce)
+
