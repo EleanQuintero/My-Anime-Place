@@ -19,7 +19,7 @@ function ListOfAnime ({ anime }) {
   }
 
   return (
-    <ul className='animes'>
+    <ul className="grid grid-cols-16 m-0 p-0  w-full list-none gap-6">
       {
       (
        anime.map(anime => {

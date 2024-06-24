@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.no-scrollbar::-webkit-scrollbar{
+    display: none;
+}
+
+.no-scrollbar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.root{
+    @apply 
+    mt-20
+    bg-slate-950 
+    text-center
+    font-sans
+}
+
+body{
+    @apply bg-slate-950 
+}
