@@ -8,6 +8,7 @@ import { Favorites } from './Components/Favorites'
 import { FavProvider } from './contexts/favorites'
 import { Login } from './Components/Login/Login'
 import useLogin from './hooks/useLogin'
+import { FormButton } from './Components/UI/FormButton'
 
 function App () {
   // se busca el anime por el input
@@ -44,23 +45,30 @@ function App () {
 
   return (
     <FavProvider>
+      <div className=" flex flex-col justify-center items-center w-full max-w-3xl h-full  m-auto text-gray-200 gap-3 " >
+        <header >
+          <h1 className="
+          font-bold
+          text-4xl not-italic 
+          text-gray-100 
+          decoration-solid 
+          mb-7 " >
+            My anime place! 
+            </h1>
 
-      <div className="bg-blue-700">
-        <header>
-          <h1>My anime place! </h1>
-          <form className='form' onSubmit={handleSumbit}>
+          <form className=" text-black space-x-5 " onSubmit={handleSumbit}>
             <input
-              className={error ? 'setedError' : 'noError'}
+              className={`p-2 border-4 rounded-3xl focus:outline-none font-medium ${error ? "border-red-700" : "border-sky-700"}`}
               value={search}
               onChange={handleChange}
               placeholder='Naruto, kimetsu no yaiba, dragon ball'
               type='text'
             />
-            <button type='sumbit'>Buscar</button>
+             <FormButton />
           </form>
           {error && <p className='error-message'>{error}</p>}
         </header>
-        <section>
+        <section className="" >
           {
             isloged
               ? <Favorites />
@@ -68,7 +76,7 @@ function App () {
           }
         </section>
         <Login />
-        <main className={search ? 'main' : 'NoAnimes'}>
+        <main className={` flex flex-col justify-center items-center  ${search ? "main" : "NoAnimes"}`}>
           {loading
             ? <p>Cargando...</p>
             : <Anime anime={anime} />}
