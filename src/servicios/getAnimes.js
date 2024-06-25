@@ -17,7 +17,8 @@ export const gettedAnimes = async ({ search }) => {
       score: anime.score,
       poster: anime.images.webp.large_image_url,
       url: anime.url,
-      trailer: anime.trailer.url
+      trailer: anime.trailer.url,
+      info: anime.synopsis
     }))
   } catch (e) {
     throw new Error('Error al realizar la solicitud, intente de nuevo')
