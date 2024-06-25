@@ -4,11 +4,11 @@ import { Anime } from './Components/Animes'
 import { useAnimes } from './hooks/useAnimes'
 import debounce from 'just-debounce-it'
 import { useCallback } from 'react'
-import { Favorites } from './Components/Favorites'
 import { FavProvider } from './contexts/favorites'
 import { Login } from './Components/Login/Login'
-import useLogin from './hooks/useLogin'
 import { FormButton } from './Components/UI/FormButton'
+import { Header } from './Components/UI/Header'
+import { ShowFavSection } from './Components/UI/ShowFavSection'
 
 function App () {
   // se busca el anime por el input
@@ -23,7 +23,7 @@ function App () {
 
   const { anime, getAnimes, loading } = useAnimes({ search })
 
-  const { isloged } = useLogin()
+
 
   const debouncedGetAnimes = useCallback(
     debounce(search => {
@@ -46,16 +46,7 @@ function App () {
   return (
     <FavProvider>
       <div className=" flex flex-col justify-center items-center w-full max-w-3xl h-full  m-auto text-gray-200 gap-3 " >
-        <header >
-          <h1 className="
-          font-bold
-          text-4xl not-italic 
-          text-gray-100 
-          decoration-solid 
-          mb-7 " >
-            My anime place! 
-            </h1>
-
+        <Header />
           <form className=" text-black space-x-5 " onSubmit={handleSumbit}>
             <input
               className={`p-2 border-4 rounded-3xl focus:outline-none font-medium ${error ? "border-red-700" : "border-sky-700"}`}
@@ -67,14 +58,7 @@ function App () {
              <FormButton />
           </form>
           {error && <p className='error-message'>{error}</p>}
-        </header>
-        <section className="" >
-          {
-            isloged
-              ? <Favorites />
-              : <h1>Debes estar logueado para ver favoritos</h1>
-          }
-        </section>
+          <ShowFavSection />
         <Login />
         <main className={` flex flex-col justify-center items-center  ${search ? "main" : "NoAnimes"}`}>
           {loading
@@ -82,7 +66,6 @@ function App () {
             : <Anime anime={anime} />}
         </main>
       </div>
-
     </FavProvider>
   )
 }

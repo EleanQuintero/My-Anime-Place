@@ -26,15 +26,12 @@ function ListOfAnime ({ anime }) {
          const isAnimeInFavorites = checkAnimeFavorite(anime)
 
          return (
-           <li className='anime' key={anime.id}>
+           <li className="mt-5 " key={anime.id}>
              <h4>{anime.title}</h4>
-             <p>Nº de Episodios: {anime.episodes}</p>
+             <p className="" >Nº de Episodios: {anime.episodies}</p>
              <p>Valoracion: {anime.score}</p>
-             <a
-               href={anime.url}
-               target='_blank' rel='noreferrer'
-             >
-               <img src={anime.poster} alt={anime.title} />
+             <a href={anime.url} target='_blank' rel='noreferrer'>
+               <img  className="mt-3" src={anime.poster} alt={anime.title} />
              </a>
              <button
                onClick={() => {
