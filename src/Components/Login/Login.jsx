@@ -19,7 +19,7 @@ export function Login () {
       </label>
       <input className='check-input' id={loginCheckId} type='checkbox' hidden />
 
-      <aside className={isloged ? 'loged-section' : 'login-section'}>
+      <aside className= {` w-80  ${isloged ? "loged-section" : "login-section"}`}>
         <>
           {
         isloged

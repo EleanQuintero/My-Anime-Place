@@ -17,6 +17,7 @@ export default function useLogin () {
   useEffect(() => {
     if (isFirstInput.current) {
       isFirstInput.current = initialLoginData.user === '' && initialLoginData.password === ''
+      return
     }
 
     for (let index = 0; index < checkedUsers.length; index++) {
@@ -25,10 +26,15 @@ export default function useLogin () {
         setIsLogded(true)
         setAvatar(userAvatar)
         return
+      } 
+
+      if (initialLoginData.username === '' || initialLoginData.password === '') {
+        return
       }
 
       if (initialLoginData.username !== userData.at(index).username || initialLoginData.password !== userData.at(index).password) {
-        setError('Usuario o contraseña incorrectos, intente de nuevo')
+        setError('Datos incorrectos, intente de nuevo por favor')
+        return
       }
     }
   }, [initialLoginData])
