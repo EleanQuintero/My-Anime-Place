@@ -1,6 +1,6 @@
-import { LoginIcon } from '../Icons'
-import '../Login.css'
-import '../Favorites.css'
+import { LoginIcon } from '../Icons/Icons'
+import '../Login/Login.css'
+import '../FavoritesSection/Favorites.css'
 import { useId } from 'react'
 
 // Components
