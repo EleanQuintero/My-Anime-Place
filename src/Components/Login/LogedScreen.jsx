@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { AddToFavorite } from '../Icons'
+import { AddToFavorite } from '../Icons/Icons'
 import { LoginContext } from '../../contexts/login'
 import useLogin from '../../hooks/useLogin'
 import { useFavorites } from '../../hooks/useFavorites'

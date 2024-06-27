@@ -1,5 +1,6 @@
 import useLogin from "../../hooks/useLogin"
-import { Favorites } from "../Favorites"
+import { Favorites } from "../FavoritesSection/Favorites"
+
 
 export function ShowFavSection() {
     const { isloged } = useLogin()

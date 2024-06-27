@@ -1,4 +1,3 @@
-import './Icons.css'
 
 export function AddToFavorite () {
   return (

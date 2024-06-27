@@ -1,6 +1,6 @@
 import './Noanimes.css'
 import { NoAnimes } from './NoAnimes'
-import { AddToFavorite, RemoveFromFavorites } from './Icons'
+import { AddToFavorite, RemoveFromFavorites } from './Icons/Icons'
 import { useFavorites } from '../hooks/useFavorites'
 import useLogin from '../hooks/useLogin'
 import { ADD_FAVORITE, HIDDEN, REMOVE_FAVORITE } from '../constantes/classnames/classnames'
@@ -19,7 +19,7 @@ function ListOfAnime ({ anime }) {
   }
 
   return (
-    <ul className="grid grid-cols-16 m-0 p-0  w-full list-none gap-6">
+    <ul className="grid grid-cols-16 md  m-0 p-0  w-full list-none  gap-9">
       {
       (
        anime.map(anime => {
@@ -39,11 +39,11 @@ function ListOfAnime ({ anime }) {
                    ? removeFromFavorites(anime)
                    : addToFavorites(anime)
                }}
-               className={
+               className={` mt-2 ${
                 isloged
                   ? isAnimeInFavorites ? REMOVE_FAVORITE : ADD_FAVORITE
                   : HIDDEN
-                         }
+               }`}
              >
                {
                   isAnimeInFavorites
