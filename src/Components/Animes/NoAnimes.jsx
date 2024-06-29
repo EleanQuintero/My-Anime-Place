@@ -1,4 +1,3 @@
-import './Noanimes.css'
 export function NoAnimes () {
   return (
     <>

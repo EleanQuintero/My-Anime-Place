@@ -74,11 +74,6 @@
     display: flex;
 }
 
-.remove-fav-button:hover{
-    transition: all .3s ease;
-    background-color: rgba(184, 3, 3, 0.712);
-}
-
 .fav-button{
     align-items: center;
     background: rgba(53, 0, 176, 0.894);

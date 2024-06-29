@@ -9,7 +9,7 @@ export function FavItem ({ title, trailer, poster, episodies, score }) {
           />
         </div>
 
-        <div className='info-container'>
+        <div className='  text-xs info-container'>
           <p>Puntuacion: {score}</p>
           <p>NºEpisodios: {episodies}</p>
           <a target='_blank' href={trailer} rel='noreferrer'>
