@@ -12,7 +12,7 @@ export default function InitialLogScreen () {
 
   return (
     <div  >
-      <form  autoComplete='off' className={`grid grid-rows-4 items-center p-0 w-4 m-auto ${error? "gap-0 -mt-8 "  : "gap-4"} `} onSubmit={handleSumbitLog} action=''>
+      <form  autoComplete='off' className={`grid grid-rows-4  justify-center items-center p-0 w-4 m-auto ${error? "gap-0 -mt-8 "  : "gap-4"} `} onSubmit={handleSumbitLog} action=''>
         <h1 className=' text-sm ' >Entrar en My anime place!</h1>
         <input className=' p-1 text-center rounded-full bg-slate-900'
           name='username' type='text' placeholder='tu usuario 😊'

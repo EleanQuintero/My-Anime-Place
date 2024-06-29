@@ -1,6 +1,5 @@
 import { useSearch } from './hooks/useSearch'
 import './App.css'
-import { Anime } from './Components/Animes'
 import { useAnimes } from './hooks/useAnimes'
 import debounce from 'just-debounce-it'
 import { useCallback } from 'react'
@@ -9,6 +8,7 @@ import { Login } from './Components/Login/Login'
 import { FormButton } from './Components/UI/FormButton'
 import { Header } from './Components/UI/Header'
 import { ShowFavSection } from './Components/UI/ShowFavSection'
+import { Anime } from './Components/Animes/Animes'
 
 function App () {
   // se busca el anime por el input

@@ -1,24 +1,8 @@
-.page{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 800px;
-}
-
 main{
   display: flex;
   justify-content: center;
   width: 100%;
 
-}
-
-form{
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  
 }
 
 .animes{
@@ -48,10 +32,6 @@ form{
 .setedError{
   border: solid, 2px;
   border-color: red;
-}
-.noError{
-  border: solid, 2px;
-  border-color: yellow;
 }
 
 .error-message{
