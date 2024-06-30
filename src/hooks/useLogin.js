@@ -25,16 +25,10 @@ export default function useLogin () {
         const userAvatar = userData.at(index).avatar
         setIsLogded(true)
         setAvatar(userAvatar)
-        return
       } 
-
-      if (initialLoginData.username === '' || initialLoginData.password === '') {
-        return
-      }
-
+      
       if (initialLoginData.username !== userData.at(index).username || initialLoginData.password !== userData.at(index).password) {
         setError('Datos incorrectos, intente de nuevo por favor')
-        return
       }
     }
   }, [initialLoginData])
