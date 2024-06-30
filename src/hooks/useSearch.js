@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
+import { AnimeContext } from '../contexts/animes'
 export function useSearch () {
-  const [search, newSearch] = useState('')
   const [error, setError] = useState(null)
   const isFirstInput = useRef(true)
+
+  const {search, } = useContext(AnimeContext)
 
   // Validamos la busqueda mediante el valor obtenido en el imput
   // ⬇⬇⬇⬇
@@ -24,5 +26,5 @@ export function useSearch () {
 
     setError(null)
   }, [search])
-  return { search, newSearch, error }
+  return { search, error }
 }

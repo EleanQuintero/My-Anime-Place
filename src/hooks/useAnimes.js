@@ -1,9 +1,9 @@
-import { useRef, useState, useCallback } from 'react'
+import { useRef, useState, useCallback, useContext } from 'react'
 import { gettedAnimes } from '../servicios/getAnimes'
+import { AnimeContext } from '../contexts/animes'
 
-export function useAnimes ({ search }) {
-  const [anime, setAnimes] = useState([])
-  const [loading, setLoading] = useState(false)
+export function useAnimes () {
+ const {setLoading, setAnimes, search } = useContext(AnimeContext)
   const [error, setError] = useState(null)
   const previousSearch = useRef(search) // generamos esta referencia del valor del search
 
@@ -22,5 +22,5 @@ export function useAnimes ({ search }) {
       setLoading(false)
     }
   }, [])
-  return { anime, getAnimes, loading, error }
+  return {  getAnimes,  error }
 }
