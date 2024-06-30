@@ -3,7 +3,7 @@ import { gettedAnimes } from '../servicios/getAnimes'
 import { AnimeContext } from '../contexts/animes'
 
 export function useAnimes () {
- const {setLoading, setAnimes, search } = useContext(AnimeContext)
+  const { setLoading, setAnimes, search } = useContext(AnimeContext)
   const [error, setError] = useState(null)
   const previousSearch = useRef(search) // generamos esta referencia del valor del search
 
@@ -22,5 +22,5 @@ export function useAnimes () {
       setLoading(false)
     }
   }, [])
-  return {  getAnimes,  error }
+  return { getAnimes, error }
 }

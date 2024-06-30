@@ -8,7 +8,7 @@ import { MainSection } from './Components/UI/MainSection'
 
 function App () {
   return (
-    <div className=" flex flex-col justify-center items-center w-full max-w-3xl h-full  m-auto text-gray-200 gap-3 " >
+    <div className=' flex flex-col justify-center items-center w-full max-w-3xl h-full  m-auto text-gray-200 gap-3 '>
       <FavProvider>
         <Header />
         <Login />

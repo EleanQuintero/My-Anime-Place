@@ -1,16 +1,15 @@
-import useLogin from "../../hooks/useLogin"
-import { Favorites } from "../FavoritesSection/Favorites"
+import useLogin from '../../hooks/useLogin'
+import { Favorites } from '../FavoritesSection/Favorites'
 
-
-export function ShowFavSection() {
-    const { isloged } = useLogin()
-    return(
-        <section className="" >
-        {
+export function ShowFavSection () {
+  const { isloged } = useLogin()
+  return (
+    <section className=''>
+      {
           isloged
             ? <Favorites />
             : <h1>Debes estar logueado para ver favoritos</h1>
         }
-      </section>
-    )
+    </section>
+  )
 }

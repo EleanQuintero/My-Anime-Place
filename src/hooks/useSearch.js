@@ -4,8 +4,7 @@ export function useSearch () {
   const [error, setError] = useState(null)
   const isFirstInput = useRef(true)
 
-  const {search, } = useContext(AnimeContext)
-
+  const { search } = useContext(AnimeContext)
   // Validamos la busqueda mediante el valor obtenido en el imput
   // ⬇⬇⬇⬇
 

@@ -15,7 +15,7 @@ export function Favorites () {
 
       <aside className='fav-section'>
         <ul>
-        <h1 className='text-lg mb-5'>My favorite list: </h1>
+          <h1 className='text-lg mb-5'>My favorite list: </h1>
           {favorites.map(anime => (
             <FavItem key={anime.id} {...anime} />
           ))}
