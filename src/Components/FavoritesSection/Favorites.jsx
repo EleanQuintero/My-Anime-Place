@@ -1,4 +1,4 @@
-import { AddToFavorite, RemoveFromFavorites } from '../Icons/Icons'
+import { AddToFavorite, EraseAllIcon } from '../Icons/Icons'
 import '../FavoritesSection/Favorites.css'
 import { useFavorites } from '../../hooks/useFavorites'
 import { FavItem } from './FavItem'
@@ -22,7 +22,7 @@ export function Favorites () {
         </ul>
 
         <button className='remove-fav-button mt-6' onClick={clearFavorites}>
-          <RemoveFromFavorites />
+          <EraseAllIcon />
         </button>
 
       </aside>
